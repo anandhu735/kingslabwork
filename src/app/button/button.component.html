@@ -1,0 +1,30 @@
+<button (click)="open()" type="button">open</button>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th class="font-weight-bold">#</th>
+                <th class="font-weight-bold">UserId</th>
+                <th class="font-weight-bold">id</th>
+                <th class="font-weight-bold">title</th>
+                <th class="font-weight-bold">completed</th>
+
+
+                
+            </tr>
+        </thead>
+        <tbody *ngIf="listarray.length>0">
+            <tr *ngFor="let todos of listarray
+            let i=index" class="list-item">
+            <td>{{i+1+start}}</td>
+            <td>{{todos.UserId}}</td>
+            <td>{{todos.id}}</td>
+            <td>{{todos.title}}</td>
+            <td>{{todos.completed}}</td>
+
+        </tbody>
+    </table>
+</div>
+<div>
+  
+</div>
